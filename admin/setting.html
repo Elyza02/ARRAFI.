@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Pengaturan | Catering Arrafi</title>
+
+    <link rel="stylesheet"
+        href="setting.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!--================ HEADER ================-->
+
+    <header>
+
+        <button id="backBtn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Pengaturan</h2>
+
+        <div style="width:42px;"></div>
+
+    </header>
+
+    <!--================ PROFILE ================-->
+
+    <section class="profile-card">
+
+        <div class="profile-image">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <h3 id="adminName">
+
+            Admin Catering
+
+        </h3>
+
+        <p id="adminEmail">
+
+            admin@cateringarrafi.com
+
+        </p>
+
+    </section>
+
+    <!--================ FORM ================-->
+
+    <main class="settings-content">
+
+        <div class="input-group">
+
+            <label>
+
+                Nama Admin
+
+            </label>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Masukkan nama admin">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                Email
+
+            </label>
+
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Masukkan email">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                Password Baru
+
+            </label>
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Masukkan password baru">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                Konfirmasi Password
+
+            </label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Ulangi password">
+
+        </div>
+                <!--================ DARK MODE ================-->
+
+        <div class="setting-item">
+
+            <div>
+
+                <h4>
+
+                    Dark Mode
+
+                </h4>
+
+                <p>
+
+                    Aktifkan tampilan gelap.
+
+                </p>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="darkMode">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <!--================ BUTTON ================-->
+
+        <button
+            class="save-btn"
+            id="saveBtn">
+
+            <i class="fa-solid fa-floppy-disk"></i>
+
+            Simpan Perubahan
+
+        </button>
+
+        <button
+            class="reset-btn"
+            id="resetBtn">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Reset Semua Data
+
+        </button>
+
+        <button
+            class="logout-btn"
+            id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </main>
+
+    <!--================ MODAL RESET ================-->
+
+    <div
+        class="modal"
+        id="resetModal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3>
+
+                    Konfirmasi
+
+                </h3>
+
+            </div>
+
+            <div class="modal-body">
+
+                <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+
+                <p>
+
+                    Apakah Anda yakin ingin menghapus seluruh data pesanan?
+
+                </p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="cancel-btn"
+                    id="cancelReset">
+
+                    Batal
+
+                </button>
+
+                <button
+                    class="confirm-btn"
+                    id="confirmReset">
+
+                    Ya, Hapus
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="setting.js"></script>
+
+</body>
+
+</html>

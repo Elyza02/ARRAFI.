@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Admin | Catering Arrafi</title>
+
+    <link rel="stylesheet"
+        href="dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <button class="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <h2>Dashboard</h2>
+
+        <button class="notif-btn">
+
+            <i class="fa-regular fa-bell"></i>
+
+        </button>
+
+    </header>
+
+    <!-- ================= CONTENT ================= -->
+
+    <main class="dashboard-content">
+
+        <!-- WELCOME -->
+
+        <section class="welcome-card">
+
+            <div class="welcome-text">
+
+                <small>Selamat Datang,</small>
+
+                <h2>Admin</h2>
+
+                <p>
+                    Kelola pesanan catering dengan mudah dan efisien.
+                </p>
+
+            </div>
+
+            <div class="welcome-image">
+
+                <!-- <img
+                    src="admin.png"
+                    alt="Admin"> -->
+
+            </div>
+
+        </section>
+
+        <!-- ================= STATISTIC ================= -->
+
+        <section class="statistic">
+
+            <div class="stat-card">
+
+                <div class="icon purple">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <h3 id="totalOrder">
+
+                    0
+
+                </h3>
+
+                <small>Pesanan Baru</small>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon orange">
+
+                    <i class="fa-solid fa-hourglass-half"></i>
+
+                </div>
+
+                <h3 id="processingOrder">
+
+                    0
+
+                </h3>
+
+                <small>Diproses</small>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon blue">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                </div>
+
+                <h3 id="deliveryOrder">
+
+                    0
+
+                </h3>
+
+                <small>Dikirim</small>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <h3 id="finishOrder">
+
+                    0
+
+                </h3>
+
+                <small>Selesai</small>
+
+            </div>
+
+        </section>
+
+        <!-- ================= MENU ================= -->
+
+        <section class="menu-card">
+
+            <h3>Menu Admin</h3>
+
+            <!-- Daftar Pesanan -->
+
+            <button
+                class="menu-item"
+                id="ordersBtn">
+
+                <div class="menu-left">
+
+                    <div class="menu-icon">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Daftar Pesanan</h4>
+
+                        <small>
+                            Kelola seluruh pesanan pelanggan
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+            <!-- Verifikasi -->
+
+            <button
+                class="menu-item"
+                id="verificationBtn">
+
+                <div class="menu-left">
+
+                    <div class="menu-icon">
+
+                        <i class="fa-solid fa-money-check-dollar"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Verifikasi Pembayaran</h4>
+
+                        <small>
+                            Verifikasi bukti pembayaran
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+            <!-- Kitchen -->
+
+            <button
+                class="menu-item"
+                id="kitchenBtn">
+
+                <div class="menu-left">
+
+                    <div class="menu-icon">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Proses Makanan</h4>
+
+                        <small>
+                            Pantau proses memasak
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+                        <!-- Produksi -->
+
+            <button
+                class="menu-item"
+                id="productionBtn">
+
+                <div class="menu-left">
+
+                    <div class="menu-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Produksi</h4>
+
+                        <small>
+                            Kelola jadwal produksi
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+            <!-- Pengiriman -->
+
+            <button
+                class="menu-item"
+                id="deliveryBtn">
+
+                <div class="menu-left">
+
+                    <div class="menu-icon">
+
+                        <i class="fa-solid fa-truck"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Pengiriman</h4>
+
+                        <small>
+                            Kelola pengiriman pesanan
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+            <!-- Laporan -->
+
+            <button
+                class="menu-item"
+                id="reportBtn">
+
+                <div class="menu-left">
+
+                    <div class="menu-icon">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Laporan</h4>
+
+                        <small>
+                            Pendapatan dan statistik
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+            <!-- Pengaturan -->
+
+            <button
+                class="menu-item"
+                id="settingBtn">
+
+                <div class="menu-left">
+
+                    <div class="menu-icon">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Pengaturan</h4>
+
+                        <small>
+                            Pengaturan aplikasi
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <button
+            id="logoutBtn"
+            class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </footer>
+
+</div>
+
+<!-- ================= MODAL LOGOUT ================= -->
+
+<div
+    class="modal"
+    id="logoutModal">
+
+    <div class="modal-box">
+
+        <i class="fa-solid fa-circle-question"></i>
+
+        <h3>
+
+            Logout Admin?
+
+        </h3>
+
+        <p>
+
+            Anda akan keluar dari dashboard administrator.
+
+        </p>
+
+        <div class="modal-action">
+
+            <button
+                id="cancelLogout">
+
+                Batal
+
+            </button>
+
+            <button
+                id="confirmLogout">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Pengiriman | Catering Arrafi</title>
+
+    <link rel="stylesheet"
+        href="delivery.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <button id="backBtn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Pengiriman</h2>
+
+        <button id="refreshBtn">
+
+            <i class="fa-solid fa-rotate"></i>
+
+        </button>
+
+    </header>
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari Invoice / Nama Pelanggan">
+
+        </div>
+
+    </section>
+
+    <!-- ================= INFO ================= -->
+
+    <section class="info-card">
+
+        <div class="info-icon">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+        </div>
+
+        <div>
+
+            <h3 id="deliveryCount">
+
+                0
+
+            </h3>
+
+            <small>
+
+                Pesanan Dalam Pengiriman
+
+            </small>
+
+        </div>
+
+    </section>
+
+    <!-- ================= LIST ================= -->
+
+    <main
+        class="delivery-list"
+        id="deliveryList">
+
+        <!-- Dibuat otomatis oleh delivery.js -->
+
+        <!-- Contoh Card -->
+
+        <!--
+
+        <div class="delivery-card">
+
+            <div class="delivery-header">
+
+                <div>
+
+                    <h3>INV-240701001</h3>
+
+                    <small>03 Juli 2026</small>
+
+                </div>
+
+                <span class="status delivery">
+
+                    Pengiriman
+
+                </span>
+
+            </div>
+
+            <div class="customer">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+
+                    Andi Saputra
+
+                </span>
+
+            </div>
+
+            <div class="summary">
+
+                <div>
+
+                    <label>Total Menu</label>
+
+                    <h4>5 Menu</h4>
+
+                </div>
+
+                <div>
+
+                    <label>Total</label>
+
+                    <h4>Rp120.000</h4>
+
+                </div>
+
+            </div>
+
+            <button
+                class="detail-btn">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                Lihat Pengiriman
+
+            </button>
+
+        </div>
+
+        -->
+
+    </main>
+        <!-- ================= MODAL DETAIL ================= -->
+
+    <div
+        class="modal"
+        id="deliveryModal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3>Detail Pengiriman</h3>
+
+                <button id="closeModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+            <div
+                class="modal-body"
+                id="modalBody">
+
+                <!-- Dibuat otomatis oleh delivery.js -->
+
+            </div>
+
+            <!-- ================= FORM PENGIRIMAN ================= -->
+
+            <div class="delivery-form">
+
+                <label>
+
+                    Nama Kurir
+
+                </label>
+
+                <input
+                    type="text"
+                    id="courierName"
+                    placeholder="Masukkan nama kurir">
+
+                <label>
+
+                    Nomor Resi
+
+                </label>
+
+                <input
+                    type="text"
+                    id="trackingNumber"
+                    placeholder="Masukkan nomor resi">
+
+                <label>
+
+                    Estimasi Tiba
+
+                </label>
+
+                <input
+                    type="date"
+                    id="estimateDate">
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    id="finishBtn"
+                    class="finish-btn">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Selesaikan Pesanan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= EMPTY ================= -->
+
+    <div
+        class="empty-state"
+        id="emptyState"
+        style="display:none;">
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <h3>
+
+            Tidak Ada Pengiriman
+
+        </h3>
+
+        <p>
+
+            Belum ada pesanan yang sedang dikirim.
+
+        </p>
+
+    </div>
+
+    <!-- ================= LOADING ================= -->
+
+    <div
+        class="loading"
+        id="loading"
+        style="display:none;">
+
+        <div class="loader"></div>
+
+        <p>
+
+            Memuat Data...
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="delivery.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Laporan | Catering Arrafi</title>
+
+    <link rel="stylesheet"
+        href="report.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!--================ HEADER ================-->
+
+    <header>
+
+        <button id="backBtn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Laporan</h2>
+
+        <button id="refreshBtn">
+
+            <i class="fa-solid fa-rotate"></i>
+
+        </button>
+
+    </header>
+
+    <!--================ SEARCH ================-->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari Invoice / Nama Pelanggan">
+
+        </div>
+
+    </section>
+
+    <!--================ FILTER ================-->
+
+    <section class="filter-section">
+
+        <input
+            type="date"
+            id="startDate">
+
+        <input
+            type="date"
+            id="endDate">
+
+    </section>
+
+    <!--================ STATISTIC ================-->
+
+    <section class="statistic">
+
+        <div class="card">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div>
+
+                <h3 id="totalOrder">
+
+                    0
+
+                </h3>
+
+                <span>
+
+                    Total Pesanan
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <h3 id="finishOrder">
+
+                    0
+
+                </h3>
+
+                <span>
+
+                    Pesanan Selesai
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <div>
+
+                <h3 id="totalIncome">
+
+                    Rp0
+
+                </h3>
+
+                <span>
+
+                    Pendapatan
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ ACTION ================-->
+
+    <section class="action">
+
+        <button id="printBtn">
+
+            <i class="fa-solid fa-print"></i>
+
+            Cetak
+
+        </button>
+
+        <button id="excelBtn">
+
+            <i class="fa-solid fa-file-excel"></i>
+
+            Excel
+
+        </button>
+
+    </section>
+
+    <!--================ LIST ================-->
+
+    <main
+        class="report-list"
+        id="reportList">
+
+        <!-- Dibuat otomatis oleh report.js -->
+
+        <!--
+
+        <div class="report-card">
+
+            <div class="report-header">
+
+                <div>
+
+                    <h3>
+
+                        INV-240701001
+
+                    </h3>
+
+                    <small>
+
+                        04 Juli 2026
+
+                    </small>
+
+                </div>
+
+                <span class="status">
+
+                    Selesai
+
+                </span>
+
+            </div>
+
+            <div class="customer">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+
+                    Andi Saputra
+
+                </span>
+
+            </div>
+
+            <div class="summary">
+
+                <div>
+
+                    <label>
+
+                        Total
+
+                    </label>
+
+                    <h4>
+
+                        Rp120.000
+
+                    </h4>
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                        Menu
+
+                    </label>
+
+                    <h4>
+
+                        5
+
+                    </h4>
+
+                </div>
+
+            </div>
+
+            <button
+                class="detail-btn">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Detail
+
+            </button>
+
+        </div>
+
+        -->
+
+    </main>
+        <!--================ MODAL DETAIL ================-->
+
+    <div
+        class="modal"
+        id="reportModal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3>Detail Laporan</h3>
+
+                <button id="closeModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+            <div
+                class="modal-body"
+                id="modalBody">
+
+                <!-- Dibuat otomatis oleh report.js -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--================ EMPTY STATE ================-->
+
+    <div
+        class="empty-state"
+        id="emptyState"
+        style="display:none;">
+
+        <i class="fa-solid fa-file-circle-xmark"></i>
+
+        <h3>
+
+            Tidak Ada Data
+
+        </h3>
+
+        <p>
+
+            Belum ada transaksi yang selesai.
+
+        </p>
+
+    </div>
+
+    <!--================ LOADING ================-->
+
+    <div
+        class="loading"
+        id="loading"
+        style="display:none;">
+
+        <div class="loader"></div>
+
+        <p>
+
+            Memuat Laporan...
+
+        </p>
+
+    </div>
+
+</div>
+
+<!--================ LIBRARY EXCEL ================-->
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+<!--================ REPORT JS ================-->
+
+<script src="report.js"></script>
+
+</body>
+
+</html>

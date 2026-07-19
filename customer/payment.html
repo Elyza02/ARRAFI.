@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Pembayaran</title>
+
+<link rel="stylesheet"
+href="payment.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<header>
+
+<button
+onclick="history.back()">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</button>
+
+<h2>Pembayaran</h2>
+
+<div></div>
+
+</header>
+
+<main class="payment-content">
+
+<!-- Invoice -->
+
+<div class="card">
+
+<h3>Invoice</h3>
+
+<p id="invoice">
+
+INV-0001
+
+</p>
+
+</div>
+
+<!-- Ringkasan -->
+
+<div class="card">
+
+<h3>Ringkasan Pesanan</h3>
+
+<div class="row">
+
+<span>Subtotal</span>
+
+<b id="subtotal">
+
+Rp0
+
+</b>
+
+</div>
+
+<div class="row">
+
+<span>Ongkir</span>
+
+<b id="shipping">
+
+Rp0
+
+</b>
+
+</div>
+
+<div class="row">
+
+<span>Diskon</span>
+
+<b id="discount">
+
+Rp0
+
+</b>
+
+</div>
+
+<hr>
+
+<div class="row total">
+
+<span>Total</span>
+
+<h2 id="grandTotal">
+
+Rp0
+
+</h2>
+
+</div>
+
+</div>
+
+<!-- Metode -->
+
+<div class="card">
+
+<h3>Metode Pembayaran</h3>
+
+<div class="payment-list">
+
+<label>
+
+<input
+type="radio"
+name="payment"
+value="Transfer Bank"
+checked>
+
+<i class="fa-solid fa-building-columns"></i>
+
+Transfer Bank
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="payment"
+value="QRIS">
+
+<i class="fa-solid fa-qrcode"></i>
+
+QRIS
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="payment"
+value="COD">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+Cash On Delivery
+
+</label>
+
+</div>
+
+</div>
+
+<!-- Upload -->
+
+<div class="card">
+
+<h3>Bukti Pembayaran</h3>
+
+<input
+type="file"
+id="paymentProof"
+accept="image/*">
+
+<img
+id="previewImage">
+
+</div>
+
+<!-- Catatan -->
+
+<div class="card">
+
+<h3>Catatan</h3>
+
+<textarea
+
+id="note"
+
+placeholder="Tambahkan catatan...">
+
+</textarea>
+
+</div>
+
+</main>
+
+<footer>
+
+<button
+id="payButton">
+
+Bayar Sekarang
+
+</button>
+
+</footer>
+
+</div>
+
+<script src="payment.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Detail Menu | Catering Arrafi</title>
+
+    <link rel="stylesheet"
+        href="detail.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <button
+            class="back-btn"
+            onclick="history.back()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Detail Menu</h2>
+
+        <a
+            href="cart.html"
+            class="cart-btn">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="cartBadge">0</span>
+
+        </a>
+
+    </header>
+
+    <!-- ================= CONTENT ================= -->
+
+    <main class="content">
+
+        <div class="image-box">
+
+            <img
+                id="menuImage"
+                src="../assets/menu1.jpg"
+                alt="Menu">
+
+        </div>
+
+        <div class="detail-box">
+
+            <span
+                class="category"
+                id="menuCategory">
+
+                Lunch
+
+            </span>
+
+            <h2 id="menuName">
+
+                Lunch Box A
+
+            </h2>
+
+            <h3 id="menuPrice">
+
+                Rp25.000
+
+            </h3>
+
+            <p
+                class="description"
+                id="menuDescription">
+
+                Deskripsi Menu
+
+            </p>
+
+        </div>
+
+        <!-- ================= QTY ================= -->
+
+        <div class="qty-box">
+
+            <span>Jumlah</span>
+
+            <div class="qty-control">
+
+                <button
+                    id="minusBtn">
+
+                    <i class="fa-solid fa-minus"></i>
+
+                </button>
+
+                <span id="qty">
+
+                    1
+
+                </span>
+
+                <button
+                    id="plusBtn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ================= NOTE ================= -->
+
+        <div class="note-box">
+
+            <label>
+
+                Catatan Pesanan
+
+            </label>
+
+            <textarea
+                id="note"
+                placeholder="Contoh: Jangan pedas, tambah sambal, dll."></textarea>
+
+        </div>
+
+        <!-- ================= PRICE ================= -->
+
+        <div class="summary">
+
+            <div class="summary-row">
+
+                <span>Total</span>
+
+                <h2 id="totalPrice">
+
+                    Rp25.000
+
+                </h2>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ================= BOTTOM ================= -->
+
+    <div class="bottom-action">
+
+        <button
+            id="addCartBtn"
+            class="cart-button">
+
+            <i class="fa-solid fa-cart-plus"></i>
+
+            Tambah ke Keranjang
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="detail.js"></script>
+
+</body>
+
+</html>

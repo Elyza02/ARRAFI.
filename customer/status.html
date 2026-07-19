@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Status Pesanan | Catering Arrafi</title>
+
+    <link rel="stylesheet"
+        href="status.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <button
+            onclick="history.back()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Status Pesanan</h2>
+
+        <button
+            id="refreshBtn">
+
+            <i class="fa-solid fa-rotate"></i>
+
+        </button>
+
+    </header>
+
+    <!-- CONTENT -->
+
+    <main class="status-content">
+
+        <!-- Invoice -->
+
+        <div class="card">
+
+            <p>Invoice</p>
+
+            <h3 id="invoice">
+
+                INV-000001
+
+            </h3>
+
+        </div>
+
+        <!-- STATUS -->
+
+        <div class="card">
+
+            <h3>
+
+                Status Pesanan
+
+            </h3>
+
+            <div class="timeline">
+
+                <div
+                    class="step active"
+                    id="step1">
+
+                    <div class="circle">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </div>
+
+                    <div class="text">
+
+                        <h4>
+
+                            Menunggu Verifikasi
+
+                        </h4>
+
+                        <small>
+
+                            Pembayaran sedang diperiksa.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="line"></div>
+
+                <div
+                    class="step"
+                    id="step2">
+
+                    <div class="circle">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                    </div>
+
+                    <div class="text">
+
+                        <h4>
+
+                            Diproses
+
+                        </h4>
+
+                        <small>
+
+                            Pesanan mulai dimasak.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="line"></div>
+
+                <div
+                    class="step"
+                    id="step3">
+
+                    <div class="circle">
+
+                        <i class="fa-solid fa-kitchen-set"></i>
+
+                    </div>
+
+                    <div class="text">
+
+                        <h4>
+
+                            Produksi
+
+                        </h4>
+
+                        <small>
+
+                            Makanan sedang disiapkan.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="line"></div>
+
+                <div
+                    class="step"
+                    id="step4">
+
+                    <div class="circle">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                    </div>
+
+                    <div class="text">
+
+                        <h4>
+
+                            Pengiriman
+
+                        </h4>
+
+                        <small>
+
+                            Kurir sedang menuju lokasi.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="line"></div>
+
+                <div
+                    class="step"
+                    id="step5">
+
+                    <div class="circle">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div class="text">
+
+                        <h4>
+
+                            Selesai
+
+                        </h4>
+
+                        <small>
+
+                            Pesanan telah diterima.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DETAIL -->
+
+        <div class="card">
+
+            <h3>
+
+                Ringkasan
+
+            </h3>
+
+            <div class="info">
+
+                <span>Total Pembayaran</span>
+
+                <b id="total">
+
+                    Rp0
+
+                </b>
+
+            </div>
+
+            <div class="info">
+
+                <span>Metode</span>
+
+                <b id="paymentMethod">
+
+                    -
+
+                </b>
+
+            </div>
+
+            <div class="info">
+
+                <span>Status</span>
+
+                <b
+                    id="statusText"
+                    class="badge">
+
+                    Menunggu Verifikasi
+
+                </b>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <button
+            id="detailBtn">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            Lihat Detail Pesanan
+
+        </button>
+
+    </footer>
+
+</div>
+
+<script src="status.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Riwayat Pesanan | Catering Arrafi</title>
+
+    <link rel="stylesheet"
+        href="history.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <button
+            onclick="history.back()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Riwayat Pesanan</h2>
+
+        <button
+            id="refreshBtn">
+
+            <i class="fa-solid fa-rotate"></i>
+
+        </button>
+
+    </header>
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari Invoice...">
+
+    </div>
+
+    <!-- FILTER -->
+
+    <div class="filter">
+
+        <button
+            class="filter-btn active"
+            data-status="Semua">
+
+            Semua
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-status="Menunggu Verifikasi">
+
+            Menunggu
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-status="Diproses">
+
+            Diproses
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-status="Produksi">
+
+            Produksi
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-status="Pengiriman">
+
+            Kirim
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-status="Selesai">
+
+            Selesai
+
+        </button>
+
+    </div>
+
+    <!-- LIST -->
+
+    <main
+        class="history-list"
+        id="historyList">
+
+        <!-- Dibuat otomatis oleh history.js -->
+
+    </main>
+
+</div>
+
+<!-- MODAL DETAIL -->
+
+<div
+    class="modal"
+    id="detailModal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <h3>Ringkasan Pesanan</h3>
+
+            <button
+                id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <div
+            class="modal-body"
+            id="modalBody">
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                id="detailBtn">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Lihat Detail Pesanan
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="history.js"></script>
+
+</body>
+
+</html>

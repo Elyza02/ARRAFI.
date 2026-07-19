@@ -1,0 +1,260 @@
+/*==================================
+        RESET
+==================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#ECECEC;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/*==================================
+        PHONE
+==================================*/
+
+.phone{
+    width:390px;
+    height:844px;
+    background:#ffffff;
+    border-radius:35px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+/*==================================
+        HEADER
+==================================*/
+
+.top-area{
+    background:linear-gradient(180deg,#6A1B9A,#8E24AA);
+    height:220px;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-bottom-left-radius:35px;
+    border-bottom-right-radius:35px;
+}
+
+.logo-box{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+#logo{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+}
+
+.top-area h2{
+    font-size:24px;
+    font-weight:700;
+}
+
+.top-area p{
+    margin-top:6px;
+    font-size:14px;
+    opacity:.9;
+}
+
+/*==================================
+        FORM
+==================================*/
+
+form{
+    flex:1;
+    overflow-y:auto;
+    padding:25px;
+}
+
+form::-webkit-scrollbar{
+    display:none;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#444;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    height:50px;
+    background:#F7F7F7;
+    border-radius:15px;
+    padding:0 15px;
+    border:2px solid transparent;
+    transition:.25s;
+}
+
+.input-box:focus-within{
+    border-color:#6A1B9A;
+}
+
+.input-box i{
+    color:#6A1B9A;
+    font-size:18px;
+}
+
+.input-box input{
+    flex:1;
+    height:100%;
+    border:none;
+    outline:none;
+    background:none;
+    padding-left:12px;
+    font-size:14px;
+}
+
+.togglePassword{
+    cursor:pointer;
+}
+
+/*==================================
+        ROLE
+==================================*/
+
+.role-group{
+    margin-top:10px;
+}
+
+.role-group label{
+    font-weight:600;
+    color:#444;
+}
+
+.role-container{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+.role-card{
+    flex:1;
+    background:#F7F7F7;
+    border:2px solid #E0E0E0;
+    border-radius:18px;
+    padding:20px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    position:relative;
+}
+
+.role-card input{
+    display:none;
+}
+
+.role-card i{
+    font-size:30px;
+    color:#6A1B9A;
+    margin-bottom:10px;
+}
+
+.role-card span{
+    font-size:14px;
+    font-weight:600;
+    color:#444;
+}
+
+.role-card:has(input:checked){
+    border-color:#6A1B9A;
+    background:#F3E5F5;
+    transform:scale(1.02);
+}
+
+/*==================================
+        BUTTON
+==================================*/
+
+.register-btn{
+    width:100%;
+    height:52px;
+    margin-top:30px;
+    border:none;
+    border-radius:15px;
+    background:#6A1B9A;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#4A148C;
+}
+
+.register-btn:active{
+    transform:scale(.98);
+}
+
+/*==================================
+        FOOTER
+==================================*/
+
+.bottom-text{
+    text-align:center;
+    padding:18px;
+    font-size:14px;
+    color:#666;
+}
+
+.bottom-text a{
+    color:#6A1B9A;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.bottom-text a:hover{
+    text-decoration:underline;
+}
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+@media(max-width:430px){
+
+    body{
+        padding:0;
+        background:#fff;
+    }
+
+    .phone{
+        width:100%;
+        height:100vh;
+        border-radius:0;
+        box-shadow:none;
+    }
+
+}
